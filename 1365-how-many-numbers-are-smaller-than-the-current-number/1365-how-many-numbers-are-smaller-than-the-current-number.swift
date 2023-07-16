@@ -2,9 +2,9 @@ class Solution {
     func smallerNumbersThanCurrent(_ nums: [Int]) -> [Int] {
         var smallerNumber = [Int]()
         var currentValue = 0
-        for i in nums {
-            for j in nums {
-                if i > j {
+        for i in 0 ..< nums.count {
+            for j in 0 ..< nums.count {
+                if nums[i] > nums[j] {
                     currentValue += 1
                 }
             }
