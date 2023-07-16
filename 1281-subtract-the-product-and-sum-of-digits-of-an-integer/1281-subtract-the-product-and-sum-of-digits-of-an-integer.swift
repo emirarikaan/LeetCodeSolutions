@@ -1,14 +1,13 @@
 class Solution {
     func subtractProductAndSum(_ n: Int) -> Int {
-        var sumValue = 0
-        var multiplyValue = 1
-        var t = String(n)
-        for i in t {
-             if let digit = Int(String(i)) {
-                sumValue += digit
-                multiplyValue *= digit
-            }
+         var product = 1
+        var sum = 0
+        var n = n
+        while n != 0 {
+            product *= n % 10
+            sum += n % 10
+            n /= 10
         }
-        return (multiplyValue - sumValue)
-    }
+        return product - sum
+}
 }
